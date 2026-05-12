@@ -237,10 +237,10 @@ export default function App() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-        :root{--bg:#0d1117;--surface:#161b22;--surface2:#21262d;--border:#30363d;--text:#e6edf3;--text-muted:#7d8590;--accent:#2ea043;--accent-hover:#3fb950;--danger:#f85149;--blue:#388bfd;--radius:8px}
+        :root{--bg:#ffffff;--surface:#f8f9fa;--surface2:#e9ecef;--border:#dee2e6;--text:#212529;--text-muted:#6c757d;--accent:#2ea043;--accent-hover:#258f39;--danger:#dc3545;--blue:#0d6efd;--radius:8px}
         body{background:var(--bg);color:var(--text);font-family:'Onest',sans-serif;min-height:100vh}
         .app{min-height:100vh;display:flex;flex-direction:column}
-        header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+        header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
         .header-inner{max-width:1400px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:16px;height:64px}
         .logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
         .logo-icon{font-size:26px}
@@ -268,7 +268,7 @@ export default function App() {
         table{width:100%;border-collapse:collapse;font-size:13px}
         thead{background:var(--surface2);position:sticky;top:0;z-index:10}
         th{padding:12px 16px;text-align:left;font-weight:600;color:var(--text-muted);border-bottom:1px solid var(--border);font-size:11px;text-transform:uppercase;letter-spacing:.5px}
-        tr:hover td{background:rgba(255,255,255,.02)}
+        tr:hover td{background:rgba(0,0,0,.02)}
         td{padding:11px 16px;border-bottom:1px solid var(--border);vertical-align:top;transition:background .1s}
         tr:last-child td{border-bottom:none}
         .num{color:var(--text-muted);font-family:'JetBrains Mono',monospace;font-size:12px}
@@ -279,7 +279,7 @@ export default function App() {
         mark{background:rgba(210,153,34,.35);color:#e3b341;border-radius:3px;padding:0 2px}
         .opt-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:500;line-height:1.5}
         .opt-correct{background:rgba(46,160,67,.15);color:#3fb950;border:1px solid rgba(46,160,67,.3)}
-        .opt-wrong{background:rgba(255,255,255,.04);color:var(--text-muted);border:1px solid var(--border)}
+        .opt-wrong{background:#f8f9fa;color:var(--text-muted);border:1px solid var(--border)}
         .pagination{display:flex;justify-content:center;align-items:center;gap:4px;margin-top:20px}
         .pagination button{background:var(--surface);border:1px solid var(--border);color:var(--text-muted);padding:8px 12px;border-radius:var(--radius);cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:13px;min-width:38px;transition:all .15s}
         .pagination button:hover:not(:disabled){background:var(--surface2);color:var(--text)}

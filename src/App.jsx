@@ -81,8 +81,8 @@ export default function App() {
           <div className="logo">
             <span className="logo-icon">⚕</span>
             <div>
-              <h1>Хирургия</h1>
-              <p>Хирургические болезни · 3 курс</p>
+              <h1>Гистология</h1>
+              <p>Гистология · 2 курс</p>
             </div>
           </div>
 
@@ -215,7 +215,7 @@ export default function App() {
           </div>
         )}
 
-        {view==="quiz" && quizDone && (
+        {view === "quiz" && quizDone && (
           <div className="quiz-done">
             <div className="result-card">
               <div className="result-icon">{score>=16?"🏆":score>=12?"👍":score>=8?"📚":"💪"}</div>

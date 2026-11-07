@@ -53,8 +53,20 @@ export default function App() {
     searchRef.current?.focus();
   }
 
+  function shuffleArray(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
   function startQuiz() {
-    const arr = [...questionsData].sort(() => Math.random() - 0.5).slice(0, 20);
+    const arr = [...questionsData]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 25)
+      .map((q) => ({ ...q, options: shuffleArray(q.options) }));
     setShuffled(arr);
     setQuizIndex(0);
     setSelected(null);
@@ -81,8 +93,8 @@ export default function App() {
           <div className="logo">
             <span className="logo-icon">⚕</span>
             <div>
-              <h1>Инфекционные болезни</h1>
-              <p>Гистология · 2 курс</p>
+              <h1>Радиология</h1>
+              <p>Радиология</p>
             </div>
           </div>
 
@@ -218,12 +230,12 @@ export default function App() {
         {view === "quiz" && quizDone && (
           <div className="quiz-done">
             <div className="result-card">
-              <div className="result-icon">{score>=16?"🏆":score>=12?"👍":score>=8?"📚":"💪"}</div>
+              <div className="result-icon">{score>=20?"🏆":score>=15?"👍":score>=10?"📚":"💪"}</div>
               <h2>Тест завершён!</h2>
               <div className="result-score">{score}<span>/{shuffled.length}</span></div>
               <div className="result-percent">{Math.round((score/shuffled.length)*100)}%</div>
               <p className="result-msg">
-                {score>=16?"Отлично! Вы отлично знаете материал!":score>=12?"Хорошо! Продолжайте учиться.":score>=8?"Неплохо, но нужно повторить.":"Нужно больше практики. Не сдавайтесь!"}
+                {score>=20?"Отлично! Вы отлично знаете материал!":score>=15?"Хорошо! Продолжайте учиться.":score>=10?"Неплохо, но нужно повторить.":"Нужно больше практики. Не сдавайтесь!"}
               </p>
               <div className="result-btns">
                 <button className="quiz-btn-primary" onClick={startQuiz}>🔄 Ещё раз</button>

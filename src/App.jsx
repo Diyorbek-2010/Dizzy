@@ -93,8 +93,8 @@ export default function App() {
           <div className="logo">
             <span className="logo-icon">⚕</span>
             <div>
-              <h1>Радиология</h1>
-              <p>Радиология</p>
+              <h1>Педиатрия</h1>
+              <p>Педиатрия</p>
             </div>
           </div>
 
